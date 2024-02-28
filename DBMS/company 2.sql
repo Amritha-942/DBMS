@@ -1,0 +1,15 @@
+select*from countries;
+select email,phone_number from employees;
+select *from employees where last_name='fay';
+select*from employees where job_id=(select job_id from jobs where job_title='shipping clerk');
+select * from departments order by department_id desc;
+select *from employees where last_name like "k%";
+select first_name from employees where year(hire_date) between "1995" and "1997";
+select *from jobs where max_salary<30000;
+select lower(email) from employees;
+select first_name from employees where year(hire_date)="1995";
+delete from departments where department_name="shipping";
+set sql_safe_updates=1;
+use company;
+select employees.first_name,jobs.job_id from employees inner join jobs on employees.job_id=jobs.job_id where job_title="public accountant";
+select * from jobs;
